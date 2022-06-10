@@ -1,0 +1,53 @@
+.tips {
+    &__wrapper {
+        display: flex;
+    }
+}
+
+.headshots {
+    flex: 0 1 50%;
+}
+
+.useful-tips {
+    flex: 0 1 50%;
+
+    &__title {
+        font-size: 75px;
+        font-family: tahu;
+        color: #1c1c1c;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 90px;
+        row-gap: 55px;
+
+        > * {
+            display: flex;
+
+            padding: 20px 20px 20px 100px;
+            border-bottom: 1px solid #D2D2D2;
+        }
+
+        *:nth-child(1) {
+          background-color: #000;
+          background: url("../img/tips/camera.png") 0 50% / auto no-repeat;
+        }
+        *:nth-child(2) {
+          background: url("../img/tips/mirror.png") 0 50% / auto no-repeat;
+        }
+        *:nth-child(3) {
+          background: url("../img/tips/eyes.png") 0 50% / auto no-repeat;
+        }
+        *:nth-child(4) {
+          background: url("../img/tips/studio.png") 0 50% / auto no-repeat;
+        }
+        *:nth-child(5) {
+          border: none;
+        }
+        *:nth-child(6) {
+          background: url("../img/tips/tshirt.png") 0 50% / auto no-repeat;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "null", "fonts";
+
+$bp1: 1200px;
+$bp2: 992px;
+$bp3: 768px;
+$bp4: 480px;
+
+body {
+    font-family: Poppins;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 50px;
+    font-family: Poppins;
+    color: #1c1c1c;
+    font-weight: 600;
+    text-transform: none;
+    @media (max-width: $bp4) {
+        font-size: 38px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1530px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #FF3928;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+@import "header", "intro", "sessions", "map", "services";
+@import "tips", "comments", "about-us", "blog", "footer";
+

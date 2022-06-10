@@ -1,0 +1,59 @@
+.map {
+    background: url("../img/map.png") 0 0 / auto no-repeat;
+    height: 565px;
+    display: flex;
+    align-items: center;
+
+    &__inner {
+        width: 100%;
+        max-width: 700px;
+        background-color: #fff;
+        color: #1C1C1C;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 50px 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        @media (max-width: $bp4) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        * {
+            margin-bottom: 25px;
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-family: "Poppins";
+        text-transform: none;
+        @media (max-width: $bp4) {
+            font-size: 16px;
+        }
+    }
+
+    &__wrapbtn {
+        max-width: 365px;
+        height: 50px;
+        background-color: #F6F6F6;
+        @media (max-width: $bp4) {
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    &__btn {
+        width: 160px;
+        height: 50px;
+        float: right;
+        @media (max-width: $bp4) {
+            float: left;
+        }
+    }
+}

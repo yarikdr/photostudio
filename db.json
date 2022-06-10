@@ -1,0 +1,24 @@
+{
+    "useful-tips": [
+        {
+            "text": "Go professional, it's worth it, because cheap looks cheap.",
+            "icon": "img/tips/camera.png"
+        },
+        {
+            "text": "Make sure it looks like you, not like you want to be.",
+            "icon": "img/tips/mirror.png"
+        },
+        {
+            "text": "It's all about the eyes and what's behind them.",
+            "icon": "img/tips/eyes.png"
+        },
+        {
+            "text": "Control framing, lighting & background.",
+            "icon": "img/tips/studio.png"
+        },
+        {
+            "text": "Stay chill with clothing & makeup, you must be you.",
+            "icon": "img/tips/tshirt.png"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+.intro {
+    background: url("../img/bg.png") 0 0 / auto no-repeat;
+    padding-left: 180px;
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 510px;
+    text-transform: capitalize;
+
+    &__title {
+        font-size: 70px;
+        color: #fff;
+        font-weight: bold;
+
+        @media (max-width: $bp4) {
+            font-size: 47px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 21px;
+        color: #fff;
+
+        @media (max-width: $bp4) {
+            font-size: 16px;
+        }
+    }
+
+    &__btn {
+        width: 215px;
+        height: 45px;
+    }
+
+    @media (max-width: $bp3) {
+        padding: 0;
+        align-items: center;
+    }
+}

@@ -1,0 +1,120 @@
+.sessions {
+    display: flex;
+    margin-top: 100px;
+    text-transform: capitalize;
+
+
+
+    @media (max-width: $bp3) {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    &__individual,
+    &__companies {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // padding-top: 80px;
+        // padding-bottom: 100px;
+        padding: 80px 15px 100px 15px;
+    }
+
+    &__individual {
+        background-color: #1C1C1C;
+    }
+
+    &__companies {
+        background-color: #F6F6F6;
+    }
+
+    &__icon {
+        height: 45px;
+        margin-bottom: 20px;
+
+        &_ind {
+            width: 45px;
+            background: url("../img/ind.png") center / auto no-repeat;
+        }
+
+        &_com {
+            width: 80px;
+            background: url("../img/com.png") center / auto no-repeat;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        &_ind {
+            color: #fff;
+        }
+
+        &_com {
+            color: #000;
+        }
+    }
+
+    &__list {
+        counter-reset: myCounter;
+        font-weight: bold;
+        list-style: none;
+        max-width: 435px;
+        width: 100%;
+
+        * {
+            margin: 0px 0px 50px 0px;
+            padding: 0 20px 20px 60px;
+            font-size: 18px;
+            font-weight: normal;
+            // border-bottom: 1px solid #4D4D4D;
+            position: relative;
+            height: 50px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        *::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 0;
+            margin: 0;
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            font-size: 80px;
+            line-height: 0.7;
+            font-weight: bold;
+            color: #4D4D4D;
+        }
+
+        *::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #4D4D4D;
+        }
+
+        &_ind {
+            color: #fff;
+        }
+
+        // &_com
+        //
+    }
+
+    &__btn {
+        width: 220px;
+        height: 50px;
+    }
+}
