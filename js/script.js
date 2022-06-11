@@ -30,12 +30,13 @@ document.querySelector('.burger').addEventListener('click', function() {
     document.querySelector('.header__nav').classList.toggle('active');
 });
 
-const photos = document.querySelectorAll('.services__check'),
-      bigPhoto = document.querySelector('.services__presentation');
+const photos = document.querySelectorAll('.services__photo > img'),
+      bigPhoto = document.querySelector('.services__presentation > img'),
+      photoBtns = document.querySelectorAll('.services__check');
 
-photos.forEach(item => {
+photoBtns.forEach((item, index) => {
     item.addEventListener('click', () => {
-        bigPhoto.style.backgroundImage = window.getComputedStyle(item.parentElement).backgroundImage;
+        bigPhoto.src = photos[index].src;
     });
 });
 // console.log(window.getComputedStyle(document.querySelector('.services__photo')).backgroundImage);
