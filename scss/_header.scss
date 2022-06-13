@@ -5,8 +5,6 @@
     text-transform: capitalize;
 
     &__title {
-        font-size: 60px;
-        font-family: tahu;
         color: rgb(34, 34, 34);
         flex: 0 0 auto;
         @media (max-width: $bp1) {

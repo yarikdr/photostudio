@@ -22,7 +22,7 @@
     }
 
     &__individual {
-        background-color: #1C1C1C;
+        background-color: $mainColor;
     }
 
     &__companies {
@@ -35,12 +35,12 @@
 
         &_ind {
             width: 45px;
-            background: url("../img/ind.png") center / auto no-repeat;
+            background: url("../img/sessions/ind.png") center / auto no-repeat;
         }
 
         &_com {
             width: 80px;
-            background: url("../img/com.png") center / auto no-repeat;
+            background: url("../img/sessions/com.png") center / auto no-repeat;
         }
     }
 
@@ -71,7 +71,6 @@
         * {
             margin: 0px 0px 50px 0px;
             padding: 0 20px 20px 60px;
-            font-size: 18px;
             font-weight: normal;
             // border-bottom: 1px solid #4D4D4D;
             position: relative;
@@ -109,8 +108,10 @@
             color: #fff;
         }
 
-        // &_com
-        //
+        &_com {
+            font-weight: 500;
+        }
+        
     }
 
     &__btn {

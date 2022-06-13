@@ -1,20 +1,52 @@
 .tips {
     &__wrapper {
         display: flex;
+        margin: 0 -15px;
+        >* {
+            padding: 0 15px;
+        }
+
+        >*:first-child {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $bp3) {
+            flex-direction: column;
+        }
     }
 }
 
 .headshots {
-    flex: 0 1 50%;
+    flex: 1 1 50%;
+    position: relative;
+    &__title {
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__text {
+        max-width: 620px;
+    }
+
+    &__arrow {
+        position: absolute;
+        left: 20px;
+        bottom: -70px;
+
+        @media (max-width: $bp1) {
+            display: none;
+        }
+    }
+    @media (max-width: $bp3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .useful-tips {
-    flex: 0 1 50%;
+    flex: 1 1 50%;
 
     &__title {
-        font-size: 75px;
-        font-family: tahu;
-        color: #1c1c1c;
+        margin: 0px 0px 80px 0px;
     }
 
     &__list {
@@ -22,32 +54,92 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 90px;
         row-gap: 55px;
-
-        > * {
+        >* {
             display: flex;
-
             padding: 20px 20px 20px 100px;
             border-bottom: 1px solid #D2D2D2;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 95px;
+                height: 70px;
+                background: url("../img/tips/camera.png") 50% / auto no-repeat;
+            }
         }
-
         *:nth-child(1) {
-          background-color: #000;
-          background: url("../img/tips/camera.png") 0 50% / auto no-repeat;
+           &:before {background: url("../img/tips/01.png") 50% / auto no-repeat;}
         }
         *:nth-child(2) {
-          background: url("../img/tips/mirror.png") 0 50% / auto no-repeat;
+           &:before {background: url("../img/tips/02.png") 50% / auto no-repeat;}
         }
         *:nth-child(3) {
-          background: url("../img/tips/eyes.png") 0 50% / auto no-repeat;
+            &:before {background: url("../img/tips/03.png") 50% / auto no-repeat;}
         }
         *:nth-child(4) {
-          background: url("../img/tips/studio.png") 0 50% / auto no-repeat;
+            &:before {background: url("../img/tips/04.png") 50% / auto no-repeat;}
         }
         *:nth-child(5) {
-          border: none;
+            visibility: hidden;
         }
         *:nth-child(6) {
-          background: url("../img/tips/tshirt.png") 0 50% / auto no-repeat;
+           &:before {background: url("../img/tips/05.png") 50% / auto no-repeat;}
         }
+    }
+
+    @media (max-width: $bp1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__list {
+            grid-template-columns: fit-content(380px);
+            justify-items: end;
+            *:nth-child(5) {
+                display: none;
+            }
+        }
+    }
+}
+
+.textblock {
+    margin: 0px 0px 0px 110px;
+    max-width: 1050px;
+    width: 100%;
+    padding: 50px 115px 70px 80px;
+    background-color: $mainColor;
+    color: #fff;
+    * {
+        margin-bottom: 50px;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+    &__title {
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 32 / 22 * 100%;
+        @media (max-width: $bp4) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        a {
+            position: relative;
+            display: inline-block;
+            text-decoration: underline #FF3928;
+        }
+    }
+    @media (max-width: $bp1) {
+        margin: 40px 0px 0px 0px;
+    }
+
+    @media (max-width: $bp4) {
+        padding: 30px;
     }
 }
