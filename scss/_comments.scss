@@ -1,0 +1,82 @@
+.comments {
+    padding: 100px 0 140px 0;
+    color: #fff;
+    background-color: $mainColor;
+    &__title {
+        margin: 0px 0px 5px 0px;
+        text-align: center;
+    }
+
+    &__desc {
+        margin: 0px 0px 70px 0px;
+        text-align: center;
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        >* {
+            margin-right: 20px;
+            margin-bottom: 20px;
+            @media (max-width: $bp3) {
+                margin-right: 0;
+            }
+        }
+
+        >*:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    // &__item {}
+}
+
+.item {
+    max-width: 490px;
+    &__photo {
+        max-width: 490px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // &__info {}
+
+    &__desc {
+        display: flex;
+    }
+
+    &__name {
+        flex: 1 1 auto;
+        padding-right: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 1.75;
+    }
+
+    &__rate {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        * {
+            margin-right: 2px;
+        }
+        *:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__comment {
+        font-style: italic;
+        background: url("../img/comments/quotes.png") 0 0 / auto no-repeat;
+        padding-left: 50px;
+        padding-top: 25px;
+    }
+}
