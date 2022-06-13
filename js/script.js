@@ -39,4 +39,8 @@ photoBtns.forEach((item, index) => {
         bigPhoto.src = photos[index].src;
     });
 });
-// console.log(window.getComputedStyle(document.querySelector('.services__photo')).backgroundImage);
+
+//Blog
+document.querySelector('#blog').addEventListener('click', () => {
+    document.querySelector('.blog__gallery').classList.toggle('scroll');
+});

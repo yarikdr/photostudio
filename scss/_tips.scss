@@ -1,5 +1,5 @@
 .tips {
-    background-color: #F6F6F6;
+    background-color: $grey;
     padding: 80px 0 100px 0;
     &__wrapper {
         display: flex;
@@ -134,7 +134,7 @@
         a {
             position: relative;
             display: inline-block;
-            text-decoration: underline #FF3928;
+            text-decoration: underline $orange;
         }
     }
     @media (max-width: $bp1) {
