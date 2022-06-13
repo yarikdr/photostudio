@@ -1,0 +1,42 @@
+.about {
+    height: 400px;
+    background: url("../img/about/bg.png") 0 0 / cover no-repeat;
+    color: #fff;
+    padding: 20px 15px;
+
+    &__wrapper {
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        @media (max-width: $bp3) {
+            flex-direction: column;
+            * {
+                margin-bottom: 20px;
+            }
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        padding-right: 10px;
+        @media (max-width: $bp4) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        flex: 0 0 auto;
+        width: 215px;
+        height: 45px;
+    }
+}
