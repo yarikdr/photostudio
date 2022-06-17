@@ -45,10 +45,18 @@ document.querySelector('#blog').addEventListener('click', () => {
     document.querySelector('.blog__gallery').classList.toggle('scroll');
 });
 
-const servicesSwiper = new Swiper('.swiper', {
+const servicesSwiper = new Swiper('.services__slider', {
     spaceBetween: 10,
     navigation: {
         prevEl: '#prev',
         nextEl: '#next',
-    }
+    },
+    // loop: true,
 }); 
+
+const commentsSwiper = new Swiper('.comments__slider', {
+    pagination: {
+        el: '.comments__pagination',
+        clickable: true,
+    }
+});

@@ -30,6 +30,15 @@
         }
     }
 
+    &__wrapper {
+        margin: 0px 0px 60px 0px;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+    }
+
     // &__item {}
 }
 
@@ -79,4 +88,21 @@
         padding-left: 50px;
         padding-top: 25px;
     }
+
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid $orange;
+    border-radius: 50%;
 }
