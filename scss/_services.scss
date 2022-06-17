@@ -70,8 +70,12 @@
 
     }
 
-    &__gallery {
+    &__slider {
         flex: 1 1 50%;
+        min-width: 0px;
+    }
+
+    &__gallery {
         display: grid;
         grid-auto-columns: fit-content(350px);
         grid-template-rows: repeat(2, auto);
@@ -88,8 +92,6 @@
     }
 
     &__photo {
-        width: 100%;
-        height: auto;
         position: relative;
         &:hover {
             button {
@@ -151,25 +153,28 @@
             background: url("../img/arrow.png") 50% / auto no-repeat;
         }
     }
+}
 
-    &__slider-btns {
-        display: flex;
-        * {
-            width: 50%;
-            height: 100%;
-            background-color: $grey;
-            margin: 0px 30px 0px 0px;
-            img {
-                width: auto;
-                height: auto;
-            }
+.swiper-btns {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin: 7px 0px 0px 0px;
+    * {
+        max-width: 350px;
+        width: 100%;
+        height: 100%;
+        background-color: $grey;
+        img {
+            width: auto;
+            height: auto;
         }
-
-        *:last-child {
-            img {
-                transform: rotate(180deg);
-            }
-            margin: 0px 20px 0px 0px;
+    }
+    // #prev {}
+    #next {
+        margin: 0px 0px 0px 30px;
+        img {
+            transform: rotate(180deg);
         }
     }
 }

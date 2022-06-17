@@ -44,3 +44,11 @@ photoBtns.forEach((item, index) => {
 document.querySelector('#blog').addEventListener('click', () => {
     document.querySelector('.blog__gallery').classList.toggle('scroll');
 });
+
+const servicesSwiper = new Swiper('.swiper', {
+    spaceBetween: 10,
+    navigation: {
+        prevEl: '#prev',
+        nextEl: '#next',
+    }
+}); 
